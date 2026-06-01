@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dashboardFragment" android:icon="@android:drawable/ic_menu_today"          android:title="Home"/>
+    <item android:id="@+id/workoutFragment"   android:icon="@android:drawable/ic_media_play"          android:title="Workout"/>
+    <item android:id="@+id/historyFragment"   android:icon="@android:drawable/ic_menu_recent_history" android:title="History"/>
+    <item android:id="@+id/profileFragment"   android:icon="@android:drawable/ic_menu_myplaces"       android:title="Profile"/>
+</menu>

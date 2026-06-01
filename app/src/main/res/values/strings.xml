@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">PulsePath</string>
+    <string name="tagline">Track. Move. Achieve.</string>
+    <string name="login">Sign In</string>
+    <string name="register">Create Account</string>
+    <string name="logout">Sign Out</string>
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full name</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="no_account">New to PulsePath? Create account</string>
+    <string name="have_account">Already have an account? Sign in</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_workout">Workout</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+    <string name="steps_today">Steps Today</string>
+    <string name="calories_burned">Calories Burned</string>
+    <string name="weekly_progress">Weekly Progress</string>
+    <string name="start_workout">Start Session</string>
+    <string name="stop_workout">End Session</string>
+    <string name="pause_workout">Pause</string>
+    <string name="resume_workout">Resume</string>
+    <string name="workout_history">History</string>
+    <string name="no_workouts">No sessions recorded yet.\nStart your first workout to see it here.</string>
+    <string name="kcal">kcal</string>
+    <string name="reminder_title">Time to move</string>
+    <string name="reminder_body">You have not logged a workout today. Stay consistent.</string>
+    <string name="channel_reminders">Workout Reminders</string>
+    <string name="lifetime_stats">Lifetime Stats</string>
+    <string name="total_workouts">Sessions</string>
+    <string name="total_calories">kcal Total</string>
+    <string name="total_steps">Steps Total</string>
+    <string name="sensor_waiting">Step sensor: Waiting for movement</string>
+    <string name="sensor_active">Step sensor: Active</string>
+</resources>
