@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="16dp"
+        android:paddingTop="24dp" android:paddingBottom="32dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="WORKOUT" android:textColor="@color/navy"
+            android:textSize="32sp" android:textStyle="bold" android:fontFamily="monospace"
+            android:layout_marginBottom="16dp"/>
+
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@color/bg_card"
+            android:padding="16dp" android:layout_marginBottom="16dp">
+
+            <TextView android:id="@+id/tvTimerLabel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Current Workout 0:00"
+                android:textColor="@color/text_secondary" android:textSize="14sp"
+                android:fontFamily="monospace" android:layout_marginBottom="12dp"/>
+
+
+            <LinearLayout android:id="@+id/btnTypeRunning" android:layout_width="match_parent"
+                android:layout_height="52dp" android:orientation="horizontal"
+                android:gravity="center_vertical" android:paddingHorizontal="14dp"
+                android:background="@drawable/selector_option_btn" android:layout_marginBottom="8dp">
+                <TextView android:id="@+id/tvRunningLabel" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Running"
+                    android:textColor="@color/text_primary" android:textSize="14sp"
+                    android:fontFamily="monospace"/>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="8dp">
+                <Button android:id="@+id/btnPauseResume" android:layout_width="0dp"
+                    android:layout_height="50dp" android:layout_weight="1"
+                    android:layout_marginEnd="8dp" android:background="@drawable/bg_btn_red"
+                    android:text="X  Cancel" android:textColor="#FFFFFF"
+                    android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"
+                    android:visibility="gone"/>
+                <Button android:id="@+id/btnStartStop" android:layout_width="0dp"
+                    android:layout_height="50dp" android:layout_weight="1"
+                    android:background="@drawable/bg_btn_green"
+                    android:text="Start Workout" android:textColor="#FFFFFF"
+                    android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+
+            <TextView android:id="@+id/tvSensorStatus" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:text="Step sensor: Waiting" android:textColor="@color/text_dim"
+                android:textSize="11sp" android:gravity="center"/>
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView android:id="@+id/cardLiveStats"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" android:visibility="gone"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:cardElevation="2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_gravity="center" android:text="ELAPSED"
+                    android:textColor="@color/text_secondary" android:textSize="10sp"
+                    android:textStyle="bold" android:letterSpacing="0.15" android:fontFamily="monospace"/>
+                <TextView android:id="@+id/tvTimer" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="0:00"
+                    android:textColor="@color/navy" android:textSize="52sp"
+                    android:textStyle="bold" android:gravity="center" android:fontFamily="monospace"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/tvLiveSteps" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0"
+                            android:textColor="@color/purple_accent" android:textSize="24sp"
+                            android:textStyle="bold" android:fontFamily="monospace"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="STEPS" android:textColor="@color/text_secondary"
+                            android:textSize="10sp" android:fontFamily="monospace"/>
+                    </LinearLayout>
+                    <View android:layout_width="1dp" android:layout_height="40dp"
+                        android:background="@color/divider" android:layout_gravity="center_vertical"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/tvLiveCalories" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0"
+                            android:textColor="@color/xp_green" android:textSize="24sp"
+                            android:textStyle="bold" android:fontFamily="monospace"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="KCAL" android:textColor="@color/text_secondary"
+                            android:textSize="10sp" android:fontFamily="monospace"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <LinearLayout android:id="@+id/btnTypeWalking" android:layout_width="0dp"
+                android:layout_height="72dp" android:layout_weight="1" android:layout_marginEnd="6dp"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/selector_option_btn">
+                <TextView android:id="@+id/tvWalkingLabel" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Walk"
+                    android:textColor="@color/text_secondary" android:textSize="11sp"
+                    android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnTypeCycling" android:layout_width="0dp"
+                android:layout_height="72dp" android:layout_weight="1" android:layout_marginHorizontal="3dp"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/selector_option_btn">
+                <TextView android:id="@+id/tvCyclingLabel" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Cycle"
+                    android:textColor="@color/text_secondary" android:textSize="11sp"
+                    android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnTypeHiking" android:layout_width="0dp"
+                android:layout_height="72dp" android:layout_weight="1" android:layout_marginHorizontal="3dp"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/selector_option_btn">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Hike" android:textColor="@color/text_secondary"
+                    android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnTypeSwimming" android:layout_width="0dp"
+                android:layout_height="72dp" android:layout_weight="1" android:layout_marginStart="3dp"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/selector_option_btn">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Swim" android:textColor="@color/text_secondary"
+                    android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="20dp">
+            <LinearLayout android:id="@+id/btnTypeHiit" android:layout_width="0dp"
+                android:layout_height="72dp" android:layout_weight="1" android:layout_marginEnd="6dp"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/selector_option_btn">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="HIIT" android:textColor="@color/text_secondary"
+                    android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnTypeYoga" android:layout_width="0dp"
+                android:layout_height="72dp" android:layout_weight="1" android:layout_marginHorizontal="3dp"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/selector_option_btn">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Yoga" android:textColor="@color/text_secondary"
+                    android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnTypeRowing" android:layout_width="0dp"
+                android:layout_height="72dp" android:layout_weight="1" android:layout_marginHorizontal="3dp"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/selector_option_btn">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Row" android:textColor="@color/text_secondary"
+                    android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnTypeJump" android:layout_width="0dp"
+                android:layout_height="72dp" android:layout_weight="1" android:layout_marginHorizontal="3dp"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/selector_option_btn">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Jump" android:textColor="@color/text_secondary"
+                    android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnTypeWeights" android:layout_width="0dp"
+                android:layout_height="72dp" android:layout_weight="1" android:layout_marginStart="3dp"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/selector_option_btn">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Lift" android:textColor="@color/text_secondary"
+                    android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@color/bg_card" android:padding="16dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/tvExercisesLabel" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Exercises" android:textColor="@color/navy"
+                    android:textSize="20sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Filter" android:textColor="#FFFFFF" android:textSize="13sp"
+                    android:textStyle="bold" android:background="@drawable/bg_btn_purple"
+                    android:paddingHorizontal="16dp" android:paddingVertical="6dp"
+                    android:fontFamily="monospace"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvExercises"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

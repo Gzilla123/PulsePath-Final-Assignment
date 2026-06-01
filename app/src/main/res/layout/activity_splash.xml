@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg_primary" android:gravity="center"
+    android:orientation="vertical">
+    <ImageView android:layout_width="96dp" android:layout_height="96dp"
+        android:src="@drawable/ic_app_logo" android:contentDescription="PulsePath"
+        android:layout_marginBottom="24dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="PulsePath" android:textColor="@color/neon_lime"
+        android:textSize="42sp" android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" android:text="Track. Move. Achieve."
+        android:textColor="@color/text_secondary" android:textSize="14sp"/>
+    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="56dp" android:indeterminateTint="@color/neon_lime"/>
+</LinearLayout>

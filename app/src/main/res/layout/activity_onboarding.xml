@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+
+    <TextView
+        android:id="@+id/tvStepIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="1 of 4"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:letterSpacing="0.1"/>
+
+
+    <LinearLayout
+        android:id="@+id/stepGoal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is your\nfitness goal?"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:lineSpacingMultiplier="1.1"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We will personalise your experience"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp"/>
+
+
+        <LinearLayout android:id="@+id/btnGoalLoseWeight"
+            android:layout_width="match_parent" android:layout_height="72dp"
+            android:layout_marginBottom="12dp" android:orientation="horizontal"
+            android:gravity="center_vertical" android:padding="16dp"
+            android:background="@drawable/selector_option_btn">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Lose Weight" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Burn calories and reduce body fat"
+                    android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/btnGoalBuildMuscle"
+            android:layout_width="match_parent" android:layout_height="72dp"
+            android:layout_marginBottom="12dp" android:orientation="horizontal"
+            android:gravity="center_vertical" android:padding="16dp"
+            android:background="@drawable/selector_option_btn">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Build Muscle" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Increase strength and muscle mass"
+                    android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/btnGoalStayActive"
+            android:layout_width="match_parent" android:layout_height="72dp"
+            android:layout_marginBottom="12dp" android:orientation="horizontal"
+            android:gravity="center_vertical" android:padding="16dp"
+            android:background="@drawable/selector_option_btn">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Stay Active" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Maintain a healthy, active lifestyle"
+                    android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/btnGoalEndurance"
+            android:layout_width="match_parent" android:layout_height="72dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:padding="16dp" android:background="@drawable/selector_option_btn">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Improve Endurance" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Build stamina and cardiovascular fitness"
+                    android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/stepActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="How active\nare you?" android:textColor="@color/text_primary"
+            android:textSize="28sp" android:textStyle="bold"
+            android:lineSpacingMultiplier="1.1" android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="8dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="This helps us set your daily goals"
+            android:textColor="@color/text_secondary" android:textSize="14sp"
+            android:layout_marginBottom="32dp"/>
+
+        <LinearLayout android:id="@+id/btnActSedentary" android:layout_width="match_parent"
+            android:layout_height="64dp" android:layout_marginBottom="12dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:padding="16dp" android:background="@drawable/selector_option_btn">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Not Active" android:textColor="@color/text_primary"
+                android:textSize="15sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="12dp" android:text="Little to no exercise"
+                android:textColor="@color/text_secondary" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/btnActLight" android:layout_width="match_parent"
+            android:layout_height="64dp" android:layout_marginBottom="12dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:padding="16dp" android:background="@drawable/selector_option_btn">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Lightly Active" android:textColor="@color/text_primary"
+                android:textSize="15sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="12dp" android:text="1-2 days per week"
+                android:textColor="@color/text_secondary" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/btnActModerate" android:layout_width="match_parent"
+            android:layout_height="64dp" android:layout_marginBottom="12dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:padding="16dp" android:background="@drawable/selector_option_btn">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Moderately Active" android:textColor="@color/text_primary"
+                android:textSize="15sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="12dp" android:text="3-4 days per week"
+                android:textColor="@color/text_secondary" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/btnActVeryActive" android:layout_width="match_parent"
+            android:layout_height="64dp" android:orientation="horizontal"
+            android:gravity="center_vertical" android:padding="16dp"
+            android:background="@drawable/selector_option_btn">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Very Active" android:textColor="@color/text_primary"
+                android:textSize="15sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="12dp" android:text="5+ days per week"
+                android:textColor="@color/text_secondary" android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/stepAge" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"
+        android:orientation="vertical" android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="How old are you?" android:textColor="@color/text_primary"
+            android:textSize="28sp" android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" android:layout_marginBottom="8dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Used to personalise your calorie goals"
+            android:textColor="@color/text_secondary" android:textSize="14sp"
+            android:layout_marginBottom="48dp"/>
+
+        <TextView android:id="@+id/tvAgeValue" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="22"
+            android:textColor="@color/neon_lime" android:textSize="72sp"
+            android:textStyle="bold" android:gravity="center"
+            android:fontFamily="sans-serif-medium" android:layout_marginBottom="24dp"/>
+
+        <SeekBar android:id="@+id/seekAge" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/neon_lime"
+            android:thumbTint="@color/neon_lime"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="15" android:textColor="@color/text_dim" android:textSize="12sp"/>
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="80" android:textColor="@color/text_dim" android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/stepBodyStats" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"
+        android:orientation="vertical" android:visibility="gone">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Body stats" android:textColor="@color/text_primary"
+            android:textSize="28sp" android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" android:layout_marginBottom="8dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Helps calculate accurate calorie burn"
+            android:textColor="@color/text_secondary" android:textSize="14sp"
+            android:layout_marginBottom="40dp"/>
+
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="WEIGHT" android:textColor="@color/text_secondary"
+            android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.12"
+            android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvWeightValue" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="70 kg"
+            android:textColor="@color/neon_lime" android:textSize="42sp"
+            android:textStyle="bold" android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="12dp"/>
+        <SeekBar android:id="@+id/seekWeight" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:progressTint="@color/neon_lime"
+            android:thumbTint="@color/neon_lime" android:layout_marginBottom="36dp"/>
+
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="HEIGHT" android:textColor="@color/text_secondary"
+            android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.12"
+            android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvHeightValue" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="170 cm"
+            android:textColor="@color/purple_light" android:textSize="42sp"
+            android:textStyle="bold" android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="12dp"/>
+        <SeekBar android:id="@+id/seekHeight" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:progressTint="@color/purple"
+            android:thumbTint="@color/purple"/>
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="20dp">
+
+        <Button android:id="@+id/btnBack" android:layout_width="0dp"
+            android:layout_height="56dp" android:layout_weight="1"
+            android:layout_marginEnd="12dp" android:background="@color/bg_card"
+            android:text="Back" android:textColor="@color/text_secondary"
+            android:textSize="15sp" android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <Button android:id="@+id/btnNext" android:layout_width="0dp"
+            android:layout_height="56dp" android:layout_weight="2"
+            android:background="@drawable/bg_btn_lime" android:text="Continue"
+            android:textColor="@color/text_on_lime" android:textSize="15sp"
+            android:textStyle="bold" android:letterSpacing="0.04"/>
+    </LinearLayout>
+
+</LinearLayout>
